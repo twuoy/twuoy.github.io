@@ -1,5 +1,5 @@
 ---
-title: 學會彈性的設定 RabbitMQ Queue 的參數，幫助未來的自己！
+title: 學會使用 RabbitMQ Policy 彈性的設定 Queue 的參數，幫助未來的自己！
 tags: RabbitMQ Policy
 cover: /assets/images/2021-06-12-how-to-use-rabbitmq-policy.jpg
 article_header:
@@ -14,7 +14,7 @@ article_header:
 
 ---
 
-> *學會彈性的設定 RabbitMQ Queue 的參數，幫助未來的自己！*
+> *學會使用 RabbitMQ Policy 彈性的設定 Queue 的參數，幫助未來的自己！*
 
 <!--more-->
 ---
