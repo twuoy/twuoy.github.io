@@ -1,0 +1,21 @@
+FROM ruby:3.0
+
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+# throw errors if Gemfile has been modified since Gemfile.lock
+RUN bundle config --global frozen 1
+
+WORKDIR /usr/src/app
+
+COPY Gemfile Gemfile.lock jekyll-text-theme.gemspec ./
+RUN bundle install
+# # workaround for issue about Jekyll and Ruby 3.0: cannot load such file -- webrick (LoadError)
+# RUN bundle add webrick
+# RUN gem install bundler:2.2.18
+
+EXPOSE 4000
+
+CMD ["bundle", "exec", "jekyll", "help"]
